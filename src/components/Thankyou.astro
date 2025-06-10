@@ -1,0 +1,128 @@
+---
+import Faqs from "../components/Faqs.astro";
+import VideoEmbed from "../components/VideoEmbed.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="relative px-4 overflow-clip">
+    <div
+      class="absolute blur-[60px] size-[832px] rounded-full bg-[#151F57]/80 -left-[310px] -top-[400px]"
+    >
+    </div>
+    <div
+      class="absolute blur-[60px] size-[832px] rounded-full bg-[#151F57]/80 -right-[310px] top-[600px]"
+    >
+    </div>
+    <section class="py-[60px] relative">
+      <div class="max-w-[940px] mx-auto">
+        <img
+          class="h-[35px] md:h-[45px] object-contain mx-auto mb-8"
+          src="/images/cliente-ejemplo.jpg"
+          alt="Cliente Ejemplo"
+        />
+        <h1
+          class="text-[26px] text-white leading-[26px] md:text-[50px] font-bold md:leading-[47px] text-center mb-8"
+        >
+          ¡Ya agendaste tu consulta! Mira este video para que puedas
+          aprovecharla al máximo.
+        </h1>
+        <VideoEmbed />
+      </div>
+    </section>
+    <section class="relative py-[60px]">
+      <div class="max-w-[900px] mx-auto">
+        <h2
+          class="text-[32px] md:text-[42px] text-white font-semibold mb-8 text-center max-w-[500px] mx-auto leading-[40px]"
+        >
+          Casos de éxito de nuestros clientes:
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <iframe
+            class="aspect-[9/16] w-full"
+            src="https://www.youtube.com/embed/SaPx0Z534HI?si=7fyhTfuIWQy-U4XJ&controls=0&modestbranding=1&rel=0&fs=0&disablekb=1&playsinline=1"
+          ></iframe>
+          <iframe
+            class="aspect-[9/16] w-full"
+            src="https://www.youtube.com/embed/SaPx0Z534HI?si=7fyhTfuIWQy-U4XJ&controls=0&modestbranding=1&rel=0&fs=0&disablekb=1&playsinline=1"
+          ></iframe>
+          <iframe
+            class="aspect-[9/16] w-full"
+            src="https://www.youtube.com/embed/SaPx0Z534HI?si=7fyhTfuIWQy-U4XJ&controls=0&modestbranding=1&rel=0&fs=0&disablekb=1&playsinline=1"
+          ></iframe>
+          <iframe
+            class="aspect-[9/16] w-full"
+            src="https://www.youtube.com/embed/SaPx0Z534HI?si=7fyhTfuIWQy-U4XJ&controls=0&modestbranding=1&rel=0&fs=0&disablekb=1&playsinline=1"
+          ></iframe>
+          <iframe
+            class="aspect-[9/16] w-full"
+            src="https://www.youtube.com/embed/SaPx0Z534HI?si=7fyhTfuIWQy-U4XJ&controls=0&modestbranding=1&rel=0&fs=0&disablekb=1&playsinline=1"
+          ></iframe>
+          <iframe
+            class="aspect-[9/16] w-full"
+            src="https://www.youtube.com/embed/SaPx0Z534HI?si=7fyhTfuIWQy-U4XJ&controls=0&modestbranding=1&rel=0&fs=0&disablekb=1&playsinline=1"
+          ></iframe>
+        </div>
+        <h2
+          class="text-[32px] text-white md:text-[42px] font-semibold mb-8 text-center max-w-[800px] mx-auto leading-[40px] mt-[120px]"
+        >
+          Mira cómo María García consiguió 40 nuevos clientes con nuestro
+          sistema:
+        </h2>
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/SaPx0Z534HI?si=7fyhTfuIWQy-U4XJ&controls=0&modestbranding=1&rel=0&fs=0&disablekb=1&playsinline=1"
+          title="Video caso de éxito"
+          allow="autoplay; encrypted-media"
+        >
+        </iframe>
+      </div>
+    </section>
+    <Faqs />
+    <img
+      class="h-[35px] md:h-[45px] object-contain mx-auto mt-12 mb-8"
+      src="/images/cliente-ejemplo.jpg"
+      alt="Cliente Ejemplo"
+    />
+    <p
+      class="text-white/80 font-medium text-[16px] md:text-[20px] text-center mb-[80px]"
+    >
+      © Agencia Ejemplo 2025. Todos los derechos reservados.
+    </p>
+  </div>
+  <script is:inline>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "942814494324978");
+    fbq("track", "Lead");
+  </script>
+  <noscript
+    ><img
+      height="1"
+      width="1"
+      style={{ display: "none" }}
+      src="https://www.facebook.com/tr?id=942814494324978&ev=PageView&noscript=1"
+    /></noscript
+  >
+</Layout>

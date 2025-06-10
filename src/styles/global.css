@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+body {
+  font-family: "League Spartan Variable", sans-serif;
+  background-color: #00041a;
+}
+
+/* Scroll */
+* {
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track,
+body {
+  background-color: #00041a;
+  overflow-x: clip;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0c7eff !important;
+  border-radius: 20px;
+  border: 5px solid #00041a;
+}
+
+.bf-btn {
+  @apply bg-[#FF904D] border-white/30 border-[3px] text-white font-semibold block mx-auto text-center md:w-fit py-4 md:px-[77px] rounded-full;
+}
+
+@media (min-width: 540px) {
+  .--highlight {
+    position: relative;
+  }
+
+  .--highlight::before {
+    content: "";
+    background-color: #094e18;
+    position: absolute;
+    width: 102%;
+    height: 22px;
+    left: -1%;
+    bottom: -2px;
+    mix-blend-mode: lighten;
+  }
+
+  .content-item {
+    padding: 16px 0 !important;
+  }
+  .content-item:first-child {
+    padding-top: 0 !important;
+  }
+  .content-item:last-child {
+    padding-bottom: 0 !important;
+  }
+}

@@ -1,0 +1,52 @@
+---
+const CONTENIDOS = [
+	{
+		titulo: "Obligados a emprender",
+		texto: "A diferencia de profesiones tradicionales como un medico, un abogado o un ingeniero, como yoga teachers, no tenemos un lugar donde llevar un cv y qué nos paguen un sueldo. En la masterclass te vamos a mostrar todos los problemas qué esto nos genera y como resolverlos.",
+		imagen: "/images/contenido-1.webp"
+	},
+	{
+		titulo: "Salas llenas vs salas vacias",
+		texto: "La diferencia entre yoga teachers qué tienen las salas llevas vs quienes las tienen vacias no es qué sepan mas qué vos, qué sean sabios iluminados o qué tengan 15 posgrados. La diferencia es qué conocen alguno secretos sobre como utilizar las redes sociales para conseguir alumnos. En la masterclass te los vamos a revelar uno por uno…",
+		imagen: "/images/contenido-2.webp"
+	},
+	{
+		titulo: "Sistema de 3 pasos",
+		texto: "Sabemos qué como yoga teacher tu interes no esta en el marketing, las ventas o la tecnologia. Por eso decidimos simplificar al maximo esto de conseguir mas alumnos y utilizar las redes sociales de manera simple, eficaz y sin estres.",
+		imagen: "/images/contenido-3.webp"
+	},
+	{
+		titulo: "Comunidad de yoguis emprendedores",
+		texto: "El peor error qué puedes cometer como yoga teacher es juntarte con otros yoga teachers a hablar de lo dificil qué es llenar clases, de lo poco comprometidos qué son los alumnos y  a llorar porque los resultados qué queres no llegan. Rompamos con este circulo de escasez. En la masterclass vas a conocer otros yoga teachers qué estan en la misma busqueda qué vos y quieren estar en un circulo virtuoso donde llenar clases es algo qué sucede de manera cotidiana.",
+		imagen: "/images/contenido-4.webp"
+	},
+];
+---
+
+<section class="py-[60px] md:py-[80px] bg-white px-4 relative z-50">
+	<div class="tcp-container">
+		<div class="max-w-[1020px] mx-auto">
+			{
+				CONTENIDOS.map((contenido, index) => (
+					<div
+						class="content-item group not-first:pt-8 not-last:pb-8 flex gap-4 md:gap-8 md:mb-0 flex-col-reverse md:flex-row md:even:flex-row-reverse not-last:border-b border-neutral-950/20 md:border-none"
+					>
+						<img src={contenido.imagen} class="border-2 border-[#151F57]/80 rounded-lg bg-gray-400 h-auto md:h-[300px] w-full md:w-1/2" />
+						<div class="flex flex-col justify-center md:w-1/2">
+							<h3 class="group-even:text-end font-bold text-[22px] md:text-[32px] text-[#111] leading-[120%]">
+								{contenido.titulo}
+							</h3>
+							<p class="group-even:text-end text-[#111]/80 mt-4">
+								{contenido.texto}
+							</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+		<div class="mt-8">
+			<button class="open-popup cursor-pointer mx-auto block w-full md:w-fit font-bold text-white border-3 border-white/30 text-center py-5 px-12 rounded-full bg-[#FF904D]">Hace clic para reservar tu lugar »</button>
+			<p class="text-[#111]/80 text-center mt-4">¡Ultimas plazas del mes!</p>
+		</div>
+	</div>
+</section>

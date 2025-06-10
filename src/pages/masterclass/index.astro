@@ -1,0 +1,58 @@
+---
+import Content from "../../components/opt-in/Content.astro";
+import Faqs from "../../components/opt-in/Faqs.astro";
+import Formulario from "../../components/opt-in/Formulario.astro";
+import Hero from "../../components/opt-in/Hero.astro";
+import Nosotros from "../../components/opt-in/Nosotros.astro";
+import Popup from "../../components/opt-in/Popup.astro";
+import Testimonios from "../../components/opt-in/Testimonios.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <Hero />
+  <Content />
+  <Nosotros />
+  <Testimonios />
+  <Formulario />
+  <Faqs />
+  <Popup />
+  <!-- Meta Pixel Code -->
+  <script is:inline>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "942814494324978");
+    fbq("track", "PageView");
+  </script>
+  <noscript
+    ><img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=942814494324978&ev=PageView&noscript=1"
+    /></noscript
+  >
+  <!-- End Meta Pixel Code →	
+</Layout>--></Layout
+>

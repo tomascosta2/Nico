@@ -1,0 +1,76 @@
+---
+const BENEFITS = [
+  {
+    icono: "/images/icons/icono-1.svg",
+    titulo: "[BENEFICIO PRINCIPAL 1]",
+    texto: "[DESCRIPCIÓN DEL PRIMER BENEFICIO QUE OBTENDRÁN TUS CLIENTES]",
+  },
+  {
+    icono: "/images/icons/icono-2.svg",
+    titulo: "[BENEFICIO PRINCIPAL 2]",
+    texto: "[DESCRIPCIÓN DEL SEGUNDO BENEFICIO CLAVE DE TU SERVICIO]",
+  },
+  {
+    icono: "/images/icons/icono-3.svg",
+    titulo: "[BENEFICIO PRINCIPAL 3]",
+    texto: "[DESCRIPCIÓN DEL TERCER BENEFICIO QUE DESTACAS]",
+  },
+  {
+    icono: "/images/icons/icono-4.svg",
+    titulo: "[BENEFICIO PRINCIPAL 4]",
+    texto: "[DESCRIPCIÓN DEL CUARTO BENEFICIO IMPORTANTE]",
+  },
+  {
+    icono: "/images/icons/icono-5.svg",
+    titulo: "[BENEFICIO PRINCIPAL 5]",
+    texto: "[DESCRIPCIÓN DEL QUINTO BENEFICIO DE TU PROPUESTA]",
+  },
+  {
+    icono: "/images/icons/icono-6.svg",
+    titulo: "[BENEFICIO PRINCIPAL 6]",
+    texto: "[DESCRIPCIÓN DEL SEXTO BENEFICIO QUE OFRECES]",
+  },
+];
+---
+
+<section class="py-10 md:py-[80px]">
+  <div class="max-w-[1000px] mx-auto px-4">
+    <h2
+      class="w-full max-w-[320px] md:max-w-[420px] mx-auto text-white text-[26px] md:text-[34px] text-center leading-[100%] font-bold"
+    >
+      Beneficios de nuestro sistema
+    </h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 md:mt-8"
+    >
+      {
+        BENEFITS.map((benefit) => {
+          return (
+            <div class="bg-[#151F57] px-4 md:px-8 pt-8 md:pt-[50px] pb-10 md:pb-[80px] rounded-[16px] text-center">
+              <img
+                class="mx-auto mb-4 w-[48px] md:w-auto"
+                src={benefit.icono}
+                alt={benefit.titulo}
+              />
+              <h3 class="font-semibold leading-[100%] my-2 md:my-4 text-white text-[18px] md:text-[22px]">
+                {benefit.titulo}
+              </h3>
+              <p class="text-white leading-[110%] text-[15px] md:text-base">
+                {benefit.texto}
+              </p>
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="mt-6 md:mt-8">
+      <button
+        class="open-popup cursor-pointer mx-auto block w-full md:w-fit font-bold text-white border-3 border-white/30 text-center py-4 md:py-5 px-6 md:px-12 rounded-full bg-[#FF904D] text-[18px] md:text-[20px]"
+        >Reserva tu consulta gratis »</button
+      >
+      <p class="text-[#FFF]/80 text-center mt-4 text-[15px] md:text-base">
+        ¡Solo quedan 3 cupos esta semana!
+      </p>
+    </div>
+  </div>
+</section>
