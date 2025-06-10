@@ -2,7 +2,7 @@
 
 body {
   font-family: "League Spartan Variable", sans-serif;
-  background-color: #00041a;
+  background-color: black;
 }
 
 /* Scroll */
@@ -16,12 +16,12 @@ body {
 
 *::-webkit-scrollbar-track,
 body {
-  background-color: #00041a;
+  background-color: black;
   overflow-x: clip;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #0c7eff !important;
+  background-color: #black !important;
   border-radius: 20px;
   border: 5px solid #00041a;
 }

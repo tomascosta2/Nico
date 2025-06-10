@@ -103,7 +103,7 @@ const TESTIMONIALS = [
       {
         FEATURED.map((test) => {
           return (
-            <div class="bg-[#151F57] p-4 md:p-8 rounded-[16px]">
+            <div class="bg-black border border-[#1d1d1d] p-4 md:p-8 rounded-[16px]">
               <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-center -mt-[62px] md:-mt-[62px]">
                 <img
                   class="w-[80px] h-[80px] md:size-[121px] rounded-full mx-auto md:mx-0"
@@ -128,11 +128,14 @@ const TESTIMONIALS = [
       }
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-      <div class="bg-gray-400 row-span-2 rounded-[16px] hidden md:block"></div>
+      <div
+        class="bg-black border border-[#1d1d1d] row-span-2 rounded-[16px] hidden md:block"
+      >
+      </div>
       {
         TESTIMONIALS.map((test) => {
           return (
-            <div class="bg-[#151F57] p-4 md:p-8 rounded-[16px]">
+            <div class="bg-black border border-[#1d1d1d] p-4 md:p-8 rounded-[16px]">
               <div class="flex gap-3 md:gap-4 items-center">
                 <img
                   class="w-[40px] h-[40px] md:size-[60px] rounded-full"
